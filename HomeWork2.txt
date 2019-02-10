@@ -1,0 +1,203 @@
+package homeWork2;
+
+public class Laptop {
+	
+private String name;
+private String opSystem;
+private int storage;
+private	static double screenSize;
+private	String ram;
+private static String screenResolution;
+private static double price = 0.0;
+	
+	
+Laptop () {
+System.out.println("My Laptop: ");
+}
+	
+Laptop (String name, String os) {
+		
+this.name = name;
+this.opSystem = os;
+}
+		
+	
+public Laptop(int strg,  String ram) {
+
+this.storage = strg;
+this.ram = ram;
+}
+public Laptop(String sr, double ss) {
+		
+	sr = screenResolution;
+	ss = screenSize;
+}
+
+
+public void basicsInfo() {
+System.out.println("The brand is " + name + "\nOperation System is " + opSystem);
+}
+public void  laptopMemory() {
+System.out.println("RAM: " + ram + "GB," + " " + "Storage " + storage + "GB");
+}
+public static void laptopScreen(String sr, double ss) {
+System.out.println("Screen resoloution and size is " + sr + "and " + ss);
+}
+
+public static double  getPrice(double price) {
+return price;
+}
+public static void main(String[] args) {
+System.out.println("price:  USD " + Laptop.getPrice(1500.0));
+Laptop obj = new Laptop();
+obj.laptopScreen("FHD 1366x786 " , 15.6);
+ 
+}
+}
+================================================
+Output:
+price:  USD 1500.0
+My Laptop: 
+Screen resoloution and size is FHD 1366x786 and 15.6
+
+
+--------------------------------------------------------------------------------------------------------------------
+package homeWork2;
+
+public class TestLaptop {
+
+public static void main(String[] args) {
+	
+//Create object 
+Laptop l1 = new Laptop();
+Laptop l2 = new Laptop("Mac Pro","iOS");
+	   l2.basicsInfo();
+Laptop l3 = new Laptop(256, "8");
+       l3.laptopMemory();
+		
+}
+}
+Output:
+==============================
+My Laptop: 
+The brand is Mac Pro
+Operation System is iOS
+RAM: 8GB, Storage 256GB
+--------------------------------------------------------------------------------
+package homeWork2;
+
+public class UseString {
+	
+	public static void main(String[]Args) {
+
+	String s = "I want to learn Java";
+	String s2 = "i want to learn java";
+	
+	System.out.println("1) "+s.toUpperCase());
+	System.out.println("2) "+s.toLowerCase());
+	System.out.println("3) "+s.length());
+	System.out.println("4) "+s.hashCode());
+	System.out.println("5) "+s.getClass());
+	System.out.println("6) "+s.CASE_INSENSITIVE_ORDER);
+	System.out.println("7) "+s.contentEquals(s));
+	System.out.println("8) "+s.contains(s));
+	System.out.println("9) "+s.intern());
+	System.out.println("10) "+s.charAt(5));
+	
+	System.out.println("11) "+s.codePointAt(8));
+	System.out.println("12) "+s.concat(" programming"));
+	System.out.println("13) "+s.equalsIgnoreCase("Java learn to want I"));
+	System.out.println("14) "+s.equalsIgnoreCase("I want to learn Java"));
+	System.out.println("15) "+s.replace('J', 'L'));
+	System.out.println("16) "+s.trim() + "l");
+	System.out.println("17) "+s.contains("want"));
+	System.out.println("18) "+s.contains("USA"));
+	System.out.println("19) "+s2.equalsIgnoreCase(s));
+	System.out.println("20) "+s2.equals(s));
+	
+	char [] Array = s2.toCharArray();
+	System.out.println("21) "+Array.length);
+	System.out.println("22) "+Array[7]);
+	System.out.println("23) "+s + " and " +s2);
+	System.out.println("24) "+s.compareTo(s2));
+	System.out.println("25) "+s.compareToIgnoreCase(s2));
+	System.out.println("26) "+s2.endsWith("java"));
+	System.out.println("27) "+s.indexOf(s2));
+	System.out.println("28) "+s2.isEmpty());
+	System.out.println("29) "+s2.valueOf(true));
+	System.out.println("30) "+s2.substring(3));	
+
+}
+
+}
+===================================================
+Output:::
+-------------------------------------------------------------------------------------
+1) I WANT TO LEARN JAVA
+2) i want to learn java
+3) 20
+4) -824357750
+5) class java.lang.String
+6) java.lang.String$CaseInsensitiveComparator@15db9742
+7) true
+8) true
+9) I want to learn Java
+10) t
+11) 111
+12) I want to learn Java programming
+13) false
+14) true
+15) I want to learn Lava
+16) I want to learn Javal
+17) true
+18) false
+19) true
+20) false
+21) 20
+22) t
+23) I want to learn Java and i want to learn java
+24) -32
+25) 0
+26) true
+27) -1
+28) false
+29) true
+30) ant to learn java
+===============================================================================================
+package homeWork2;
+
+import java.util.Scanner;
+
+public class Container {
+
+	public static void main(String[] args) {
+		Scanner s = new Scanner(System.in);
+		int[] numbers = new int[10];
+		System.out.println("Enter some numbers: ");
+		for (int i = 0; i < 10; i++) {
+
+			numbers[i] = s.nextInt();
+		}
+
+		System.out.println(numbers[9]);
+		s.close();
+
+
+	}
+
+}
+--------------------------------------------------------------------------------
+Output:
+---------------------
+Enter some numbers: 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+10
